@@ -1,0 +1,14 @@
+<% content_for :title, "Editing categorium" %>
+
+<h1 class="mb-4">Editar Categoría</h1>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <%= render "form", categorium: @categorium %>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Mostrar esta categoría", @categorium, class: "btn btn-info" %> |
+  <%= link_to "Regresar a categorías", categoria_path, class: "btn btn-secondary" %>
+</div>

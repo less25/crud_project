@@ -1,0 +1,14 @@
+<p class="text-success"><%= notice %></p>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <%= render @articulo %>
+  </div>
+</div>
+
+<div class="mb-3">
+  <%= link_to "Editar este articulo", edit_articulo_path(@articulo), class: "btn btn-warning" %> |
+  <%= link_to "Regresar a articulos", articulos_path, class: "btn btn-secondary" %>
+
+  <%= button_to "Eliminar este articulo", @articulo, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de que deseas eliminar este artículo?" } %>
+</div>

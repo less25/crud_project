@@ -1,0 +1,22 @@
+<p class="text-success"><%= notice %></p>
+
+<% content_for :title, "Categorías" %>
+
+<h1 class="mb-4">Categorías</h1>
+
+<div id="categoria" class="mb-4">
+  <% @categoria.each do |categorium| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <%= render categorium %>
+        <p>
+          <%= link_to "Mostrar esta categoría", categorium, class: "btn btn-info" %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="text-right">
+  <%= link_to "Nueva categoría", new_categorium_path, class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,14 @@
+<% content_for :title, "Editing articulo" %>
+
+<h1 class="mb-4">Editing articulo</h1>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <%= render "form", articulo: @articulo %>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Ver este articulo", @articulo, class: "btn btn-link" %> |
+  <%= link_to "Regresar a articulos", articulos_path, class: "btn btn-secondary" %>
+</div>

@@ -1,0 +1,14 @@
+<p class="text-success"><%= notice %></p>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <%= render @comentario %>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Editar este comentario", edit_comentario_path(@comentario), class: "btn btn-warning" %> |
+  <%= link_to "Regresar a comentarios", comentarios_path, class: "btn btn-secondary" %>
+
+  <%= button_to "Eliminar este comentario", @comentario, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de que quieres eliminar este comentario?" } %>
+</div>
