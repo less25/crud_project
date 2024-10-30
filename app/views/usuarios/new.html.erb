@@ -1,11 +1,11 @@
 <% content_for :title, "New usuario" %>
 
-<h1>New usuario</h1>
+<h1>Nuevo Usuario</h1>
 
-<%= render "form", usuario: @usuario %>
-
-<br>
+<div class="card mb-4" style="background-color: #f8d7da; border-radius: 12px; padding: 20px;">
+  <%= render "form", usuario: @usuario %>
+</div>
 
 <div>
-  <%= link_to "Back to usuarios", usuarios_path %>
+  <%= link_to "Regresar a usuarios", usuarios_path, class: "btn btn-secondary" %>
 </div>

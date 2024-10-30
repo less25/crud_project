@@ -1,14 +1,14 @@
 <p class="text-success"><%= notice %></p>
 
-<div class="card mb-4">
+<div class="card mb-4 shadow-sm" style="background-color: #f8d7da; border-radius: 12px;">
   <div class="card-body">
     <%= render @articulo %>
   </div>
 </div>
 
-<div class="mb-3">
-  <%= link_to "Editar este articulo", edit_articulo_path(@articulo), class: "btn btn-warning" %> |
-  <%= link_to "Regresar a articulos", articulos_path, class: "btn btn-secondary" %>
-
-  <%= button_to "Eliminar este articulo", @articulo, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de que deseas eliminar este artículo?" } %>
+<div class="mb-3 d-flex gap-2">
+  <%= link_to "Editar este artículo", edit_articulo_path(@articulo), class: "btn btn-warning" %>
+  <%= link_to "Regresar a artículos", articulos_path, class: "btn btn-secondary" %>
+  <%= button_to "Eliminar este artículo", @articulo, method: :delete, class: "btn btn-danger", 
+    data: { confirm: "¿Estás seguro de que deseas eliminar este artículo?" } %>
 </div>

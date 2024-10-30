@@ -1,14 +1,14 @@
-<% content_for :title, "Editing articulo" %>
+<% content_for :title, "Editing Artículo" %>
 
-<h1 class="mb-4">Editing articulo</h1>
+<h1 class="mb-4 text-success">Editing Artículo</h1>
 
-<div class="card mb-4">
+<div class="card mb-4 shadow-sm" style="background-color: #f8d7da; border-radius: 12px;">
   <div class="card-body">
     <%= render "form", articulo: @articulo %>
   </div>
 </div>
 
-<div>
-  <%= link_to "Ver este articulo", @articulo, class: "btn btn-link" %> |
-  <%= link_to "Regresar a articulos", articulos_path, class: "btn btn-secondary" %>
+<div class="d-flex justify-content-start">
+  <%= link_to "Ver este artículo", @articulo, class: "btn btn-link text-success me-2" %>
+  <%= link_to "Regresar a artículos", articulos_path, class: "btn btn-secondary" %>
 </div>

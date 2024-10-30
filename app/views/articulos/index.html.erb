@@ -1,20 +1,20 @@
 <p class="text-success"><%= notice %></p>
 
-<% content_for :title, "Articulos" %>
+<% content_for :title, "Artículos" %>
 
-<h1 class="mb-4">Articulos</h1>
+<h1 class="mb-4 text-success">Artículos</h1>
 
 <div id="articulos" class="mb-5">
   <% @articulos.each do |articulo| %>
-    <div class="card mb-3">
+    <div class="card mb-3 shadow-sm" style="background-color: #f8d7da; border-radius: 12px;">
       <div class="card-body">
         <%= render articulo %>
-        <p>
-          <%= link_to "Ver este articulo", articulo, class: "btn btn-link" %>
+        <p class="mt-3">
+          <%= link_to "Ver este artículo", articulo, class: "btn btn-link text-success" %>
         </p>
       </div>
     </div>
   <% end %>
 </div>
 
-<%= link_to "Nuevo articulo", new_articulo_path, class: "btn btn-primary" %>
+<%= link_to "Nuevo artículo", new_articulo_path, class: "btn btn-primary" %>

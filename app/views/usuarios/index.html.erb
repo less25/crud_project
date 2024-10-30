@@ -4,13 +4,15 @@
 
 <h1>Usuarios</h1>
 
-<div id="usuarios">
+<div id="usuarios" style="background-color: #f8d7da; border-radius: 12px; padding: 20px;">
   <% @usuarios.each do |usuario| %>
-    <%= render usuario %>
-    <p>
-      <%= link_to "Show this usuario", usuario %>
-    </p>
+    <div class="mb-3">
+      <%= render usuario %>
+      <p>
+        <%= link_to "Show this usuario", usuario, class: "btn btn-link" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New usuario", new_usuario_path %>
+<%= link_to "New usuario", new_usuario_path, class: "btn btn-primary" %>

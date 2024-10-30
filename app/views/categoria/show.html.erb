@@ -1,14 +1,15 @@
 <p class="text-success"><%= notice %></p>
 
-<div class="card mb-4">
+<div class="card mb-4 shadow-sm" style="background-color: #f8d7da; border-radius: 12px;">
   <div class="card-body">
     <%= render @categorium %>
   </div>
 </div>
 
-<div>
-  <%= link_to "Editar esta categoría", edit_categorium_path(@categorium), class: "btn btn-warning" %> |
+<div class="d-flex gap-2">
+  <%= link_to "Editar esta categoría", edit_categorium_path(@categorium), class: "btn btn-warning" %>
   <%= link_to "Regresar a categorías", categoria_path, class: "btn btn-secondary" %>
-
-  <%= button_to "Eliminar esta categoría", @categorium, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de que quieres eliminar esta categoría?" } %>
+  
+  <%= button_to "Eliminar esta categoría", @categorium, method: :delete, 
+    class: "btn btn-danger", data: { confirm: "¿Estás seguro de que quieres eliminar esta categoría?" } %>
 </div>

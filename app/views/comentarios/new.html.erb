@@ -1,11 +1,11 @@
 <% content_for :title, "New comentario" %>
 
-<h1>New comentario</h1>
+<h1 class="text-danger mb-4">Nuevo Comentario</h1>
 
-<%= render "form", comentario: @comentario %>
-
-<br>
+<div class="card mb-4 shadow-sm" style="background-color: #f8d7da; border-radius: 12px; padding: 20px;">
+  <%= render "form", comentario: @comentario %>
+</div>
 
 <div>
-  <%= link_to "Back to comentarios", comentarios_path %>
+  <%= link_to "Regresar a comentarios", comentarios_path, class: "btn btn-secondary" %>
 </div>

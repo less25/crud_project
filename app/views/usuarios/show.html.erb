@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-success"><%= notice %></p>
 
-<%= render @usuario %>
+<div class="card mb-4" style="background-color: #f8d7da; border-radius: 12px; padding: 20px;">
+  <%= render @usuario %>
+</div>
 
-<div>
-  <%= link_to "Edit this usuario", edit_usuario_path(@usuario) %> |
-  <%= link_to "Back to usuarios", usuarios_path %>
+<div class="mt-3">
+  <%= link_to "Editar este usuario", edit_usuario_path(@usuario), class: "btn btn-warning" %> |
+  <%= link_to "Regresar a usuarios", usuarios_path, class: "btn btn-secondary" %>
 
-  <%= button_to "Destroy this usuario", @usuario, method: :delete %>
+  <%= button_to "Eliminar este usuario", @usuario, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de que deseas eliminar este usuario?" } %>
 </div>

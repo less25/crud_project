@@ -2,11 +2,13 @@
 
 <h1>Editing usuario</h1>
 
-<%= render "form", usuario: @usuario %>
+<div style="background-color: #f8d7da; border-radius: 12px; padding: 20px;">
+  <%= render "form", usuario: @usuario %>
+</div>
 
 <br>
 
 <div>
-  <%= link_to "Show this usuario", @usuario %> |
-  <%= link_to "Back to usuarios", usuarios_path %>
+  <%= link_to "Show this usuario", @usuario, class: "btn btn-link" %> |
+  <%= link_to "Back to usuarios", usuarios_path, class: "btn btn-secondary" %>
 </div>
